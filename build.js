@@ -13,9 +13,6 @@ await esbuild.build({
   minifySyntax: true,
   legalComments: 'none',
   sourcemap: false,
-  banner: {
-    js: '#!/usr/bin/env node'
-  },
   external: []
 });
 
