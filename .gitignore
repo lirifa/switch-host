@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.switch-host-config.json
+.DS_Store
+*.log
+npm-debug.log*
