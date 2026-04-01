@@ -5,6 +5,7 @@ await esbuild.build({
   bundle: true,
   platform: 'node',
   target: 'node18',
+  format: 'esm',
   outfile: 'dist/switch-host.js',
   minify: true,
   minifyWhitespace: true,
