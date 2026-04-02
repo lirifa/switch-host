@@ -9,7 +9,8 @@ import {
   removeEntryInteractive,
   clearEntries,
   flushDNS,
-  updateFromRemote
+  updateFromRemote,
+  openDir
 } from './src/commands.js';
 
 function main() {
@@ -63,6 +64,10 @@ function main() {
       break;
     case 'flush':
       flushDNS();
+      break;
+    case 'opendir':
+    case 'open':
+      openDir();
       break;
     case 'help':
     case undefined:

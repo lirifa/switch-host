@@ -25,6 +25,7 @@ export const colors = {
 export function showHelp() {
   console.log(`
 Usage: switch-host <command> [options]
+       shost <command> [options]
 
 Commands:
   list, ls        List all hosts entries
@@ -43,15 +44,23 @@ Commands:
                   switch-host config hostsUrl     - show hostsUrl value
                   switch-host config hostsUrl <url> - set hostsUrl
   flush           Flush DNS cache
+  opendir, open   Open the directory containing the hosts file
   help            Show this help message
 
 Examples:
   switch-host add 127.0.0.1 example.local "local dev"
+  shost add 127.0.0.1 example.local "local dev"
   switch-host remove example.local
+  shost remove example.local
   switch-host remove
+  shost remove
   switch-host list
+  shost list
   switch-host fetch
+  shost fetch
   switch-host config hostsUrl https://example.com/hosts.json
+  shost config hostsUrl https://example.com/hosts.json
   switch-host flush
+  shost flush
 `);
 }

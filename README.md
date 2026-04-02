@@ -2,6 +2,11 @@
 
 一个管理本地 hosts 文件和刷新 DNS 的 CLI 工具。
 
+## 命令别名
+
+- `switch-host`（完整命令）
+- `shost`（简短别名）
+
 ## 功能特性
 
 - 📋 列出所有 hosts 条目（区分 fetch 的和其他的）
@@ -38,6 +43,8 @@ npm link
 
 ```bash
 switch-host <command> [options]
+# 或使用简短别名
+shost <command> [options]
 ```
 
 ## 命令说明

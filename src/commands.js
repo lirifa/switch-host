@@ -1,6 +1,7 @@
 import https from 'https';
 import { execSync } from 'child_process';
-import { colors, MARKER_START, MARKER_END } from './utils.js';
+import path from 'path';
+import { colors, MARKER_START, MARKER_END, HOSTS_PATH } from './utils.js';
 import { readHostsFile, writeHostsFile, getManagedSection, parseAllEntries } from './hosts.js';
 
 export function listEntries() {
@@ -432,4 +433,24 @@ export function updateFromRemote(url) {
       console.error(`Error: ${error.message}`);
       process.exit(1);
     });
+}
+
+export function openDir() {
+  try {
+    const dirPath = path.dirname(HOSTS_PATH);
+    console.log(`Opening directory: ${dirPath}`);
+    
+    if (process.platform === 'win32') {
+      execSync(`start "" "${dirPath}"`);
+    } else if (process.platform === 'darwin') {
+      execSync(`open "${dirPath}"`);
+    } else {
+      execSync(`xdg-open "${dirPath}"`);
+    }
+    
+    console.log('Directory opened successfully.');
+  } catch (error) {
+    console.error(`Error opening directory: ${error.message}`);
+    console.log(`Please manually open: ${path.dirname(HOSTS_PATH)}`);
+  }
 }

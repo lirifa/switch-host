@@ -1,6 +1,6 @@
 {
   "name": "@rafa.li/switch-host",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A CLI tool to manage local hosts file and flush DNS",
   "main": "index.js",
   "type": "module",
@@ -8,7 +8,8 @@
     "access": "public"
   },
   "bin": {
-    "switch-host": "./dist/switch-host.js"
+    "switch-host": "./dist/switch-host.js",
+    "shost": "./dist/switch-host.js"
   },
   "scripts": {
     "start": "node index.js",
