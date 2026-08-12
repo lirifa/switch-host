@@ -24,7 +24,7 @@
 ### 从 npm 安装
 
 ```bash
-npm install -g switch-host
+npm install -g @rafa.li/switch-host
 ```
 
 ### 本地开发
